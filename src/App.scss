@@ -1,0 +1,142 @@
+/*"https://media.wired.co.uk/photos/606dba1c9a15f73a597a2aa1/master/w_1600%2Cc_limit/weather.jpg"*/
+
+/*https://thumbs.dreamstime.com/b/frohe-weihnachten-gl%C3%BCckliches-neues-jahr-12013550.jpg*/
+
+/*https://www.hotel-maier.de/fileadmin/user_upload/Wintersport.JPG*/
+
+/*https://www.lovethispic.com/uploaded_images/121991-Golden-Sunny-Day.jpg*/
+
+/*https://st2.depositphotos.com/2952437/5828/v/950/depositphotos_58280827-stock-illustration-weather-forecast-for-tv-or.jpg*/
+
+/*https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+
+  .app {
+    /*background-image: url("https://www.lovethispic.com/uploaded_images/121991-Golden-Sunny-Day.jpg");*/
+    background-image: url("https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg");
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+  }
+
+  .app.warm {
+    background-image: url("https://www.lovethispic.com/uploaded_images/121991-Golden-Sunny-Day.jpg");
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+  }
+
+  main {
+    min-height: 100vh;
+    padding: 2%;
+    // color: #fff;
+    //text-align: center;
+
+    width: 60%;
+    margin: 0 auto;
+
+    .s-bar {
+      margin-top: -2%;
+      display: block;
+      width: 100%;
+      min-height: 5vh;
+      // appearance: none;
+      // background-color: none;
+      outline: none;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0px 7px rgba(0, 0, 0, 0.2);
+      color: #313131;
+      font-size: 2.5vw;
+      text-align: center;
+      transition: 0.4s ease;
+    }
+    .s-bar:focus {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .loc-box {
+      margin-top: 10%;
+      //padding: 4%;
+      .loc {
+        color: #fff;
+        font-size: 4vw;
+        font-weight: 700;
+        text-align: center;
+        text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+        padding: 2%;
+      }
+
+      .date {
+        color: #fff;
+        font-size: 2vw;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+      }
+    }
+
+    .w-box {
+      text-align: center;
+      //padding: 4%;
+      //margin-top: 5%;
+      .temp {
+        position: relative;
+        display: inline-block;
+        margin: 30px auto;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        padding: 4% 9%;
+        color: #fff;
+        font-size: 5vw;
+        font-weight: 900;
+        text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+        box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+      }
+      .w {
+        color: #fff;
+        font-size: 5vw;
+        font-weight: 700;
+        text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+      }
+    }
+  }
+}
+
+//============================== Media query =========================
+@media only screen and (max-width: 800px) {
+  body {
+    main {
+      width: 100%;
+      .s-bar {
+        font-size: 6vw;
+      }
+      .loc-box {
+        .loc {
+          font-size: 6vw;
+        }
+        .date {
+          font-size: 4vw;
+        }
+      }
+
+      .w-box {
+        .temp {
+          font-size: 7vw;
+        }
+        .w {
+          font-size: 7vw;
+        }
+      }
+    }
+  }
+}

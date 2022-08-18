@@ -72,7 +72,7 @@ function App() {
           <input
             type="text"
             className="s-bar"
-            placeholder="search"
+            placeholder="Location"
             value={country}
             onChange={handelChange}
           />

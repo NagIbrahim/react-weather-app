@@ -2,19 +2,19 @@ import { useState } from "react";
 import "./App.scss";
 
 const api = {
-  myKey: "773f2ca7e4cb82f8581a8de36f8c76be",
+  myKey: process.env.REACT_APP_KEY,
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
 function App() {
   const [country, setCountry] = useState("");
   const [weather, setWeather] = useState({});
-
+  console.log(api.myKey);
   const handelChange = (e) => {
     //console.log("hi from handelChange");
     setCountry((country) => e.target.value);
   };
-
+  console.log("hallo");
   const handelSubmit = (e) => {
     e.preventDefault();
     fetch(`${api.base}weather?q=${country}&units=metric&APPID=${api.myKey}`)
